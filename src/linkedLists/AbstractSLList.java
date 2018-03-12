@@ -39,5 +39,7 @@ public abstract class AbstractSLList<E> implements LinkedList<E> {
 			next = null; 
 		}
 	}
+	
+	
 
 }

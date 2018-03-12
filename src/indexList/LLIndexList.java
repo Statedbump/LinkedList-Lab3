@@ -1,9 +1,12 @@
 package indexList;
 
+import java.lang.reflect.Array;
+
 import linkedLists.LinkedList;
 import linkedLists.Node;
 
 public class LLIndexList<E> implements IndexList<E> {
+	
 	private LinkedList<E> internalLL;  
 
 	/**
@@ -120,6 +123,35 @@ public class LLIndexList<E> implements IndexList<E> {
 		ntc.setElement(e); 
 		return etr; 
 	}
+	
+	public Object[] toArray() {
+
+	    Object[] aTR = new Object[size()];
+
+	    for (int i=0; i < size(); i++) {
+	    	
+	    	aTR[i] = get(i);}
+
+		return aTR;
+	}
+
+	public <T> T[] toArray(T[] array) {
+
+	    if(size() > array.length) {
+	        T[] t1 = (T[]) Array.newInstance(array.getClass().getComponentType(), size());
+	        array = t1;
+        } else
+            for (int i = 0; i < array.length; i++) array[i] = null;
+
+	    for (int i = 0; i < size(); i++) {
+	        T t1 = (T) get(i);
+	        array[i] = t1;
+        }
+
+		return array;
+}
+	
+	
 	
 
 }

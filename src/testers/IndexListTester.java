@@ -1,5 +1,7 @@
 package testers;
 
+import linkedLists.DLDHDTList;
+import linkedLists.SLFLList;
 import linkedLists.SLList;
 import indexList.IndexList;
 import indexList.LLIndexList;
@@ -10,8 +12,8 @@ public class IndexListTester {
 	 * @param args
 	 */
 	public static void main(String[] args) {	
-		listTester("Testing the singly linked list (SLList): ",
-				new LLIndexList<Integer>(new SLList<Integer>()));	
+		listTester("Testing the singly linked list (DLDHDTList): ",
+				new LLIndexList<Integer>(new DLDHDTList<Integer>()));	
 	}
 		
 	private static void listTester(String msg, IndexList<Integer>  list) { 
