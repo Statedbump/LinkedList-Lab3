@@ -6,7 +6,7 @@ public interface LinkedList<E> {
 	
 	/**
 	 * Determines the number of nodes currently in the linked list. 
-	 * @return integer value (>= 0) correponding to the number of
+	 * @return integer value (>= 0) corresponding to the number of
 	 * nodes actually in the linked list.
 	 */
 	int length(); 
